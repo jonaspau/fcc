@@ -1,0 +1,715 @@
+# Questionnaire
+
+
+  codeally@3a9020a7f248:~/project$ touch questionnaire.sh
+  codeally@3a9020a7f248:~/project$ sh questionnaire.sh
+  hello questionnaire
+  codeally@3a9020a7f248:~/project$ bash questionnaire.sh
+  hello questionnaire
+  codeally@3a9020a7f248:~/project$ which bash
+  /usr/bin/bash
+  codeally@3a9020a7f248:~/project$ ./questionnaire.sh
+  bash: ./questionnaire.sh: Permission denied
+  codeally@3a9020a7f248:~/project$ ls -l
+  total 8
+  drwxr-sr-x 3 codeally strove 4096 Jan 27 14:28 learn-bash-scripting-by-building-five-programs
+  -rw-r--r-- 1 codeally strove   36 Jan 27 14:32 questionnaire.sh
+  codeally@3a9020a7f248:~/project$ chmod +x questionnaire.sh 
+  codeally@3a9020a7f248:~/project$ ls -l
+  total 8
+  drwxr-sr-x 3 codeally strove 4096 Jan 27 14:28 learn-bash-scripting-by-building-five-programs
+  -rwxr-xr-x 1 codeally strove   36 Jan 27 14:32 questionnaire.sh
+  codeally@3a9020a7f248:~/project$ ./questionnaire.sh
+  hello questionnaire
+  codeally@3a9020a7f248:~/project$ ./questionnaire.sh
+  hello questionnaire
+  total 8
+  drwxr-sr-x 3 codeally strove 4096 Jan 27 14:28 learn-bash-scripting-by-building-five-programs
+  -rwxr-xr-x 1 codeally strove   43 Jan 27 14:34 questionnaire.sh
+  codeally@3a9020a7f248:~/project$ ./questionnaire.sh
+  What's your name?
+  codeally@3a9020a7f248:~/project$ ./questionnaire.sh
+  What's your name?
+  Jonas
+  Hello Jonas.
+  codeally@3a9020a7f248:~/project$ ./questionnaire.sh
+  What's your name?
+  Jonas
+  Where are you from?
+  Ski
+  Hello Jonas from Ski.
+  codeally@3a9020a7f248:~/project$ ./questionnaire.sh
+  ~~ Questionnaire ~~
+  What's your name?
+  Jonas
+  Where are you from?
+  Ski
+  Hello Jonas from Ski.
+  codeally@3a9020a7f248:~/project$ echo --help
+  --help
+  codeally@3a9020a7f248:~/project$ man echo
+  codeally@3a9020a7f248:~/project$ man echo
+  codeally@3a9020a7f248:~/project$ ./questionnaire.sh
+  n~~ Questionnaire ~~n
+  What's your name?
+  ^C
+  codeally@3a9020a7f248:~/project$ ./questionnaire.sh
+
+  ~~ Questionnaire ~~
+
+  What's your name?
+  ^C
+  codeally@3a9020a7f248:~/project$ ./questionnaire.sh
+
+  ~~ Questionnaire ~~
+
+  What's your name?
+  Jonas
+  Where are you from?
+  Ski
+  What's your favorite coding website?
+  FCC
+  Hello Jonas from Ski. I learned that your favorite coding website is FCC!
+  codeally@3a9020a7f248:~/project$ ./questionnaire.sh
+
+  ~~ Questionnaire ~~
+
+  What's your name?
+  Jonas
+  Where are you from?
+  Ski
+  What's your favorite coding website?
+  FCC
+
+  Hello Jonas from Ski. I learned that your favorite coding website is FCC!
+
+
+# Countdown
+
+
+  codeally@3a9020a7f248:~/project$ touch countdown.sh
+  codeally@3a9020a7f248:~/project$ chmod +x countdown.sh 
+  codeally@3a9020a7f248:~/project$ ./countdown.sh
+  codeally@3a9020a7f248:~/project$ ./countdown.sh arg1 arg2 arg3
+  arg1 arg2 arg3
+  codeally@3a9020a7f248:~/project$ ./countdown.sh arg1 arg2 arg3
+  arg1
+  codeally@3a9020a7f248:~/project$ man if
+  No manual entry for if
+  codeally@3a9020a7f248:~/project$ help if
+  if: if COMMANDS; then COMMANDS; [ elif COMMANDS; then COMMANDS; ]... [ else COMMANDS; ] fi
+      Execute commands based on conditional.
+      
+      The `if COMMANDS' list is executed.  If its exit status is zero, then the
+      `then COMMANDS' list is executed.  Otherwise, each `elif COMMANDS' list is
+      executed in turn, and if its exit status is zero, the corresponding
+      `then COMMANDS' list is executed and the if command completes.  Otherwise,
+      the `else COMMANDS' list is executed, if present.  The exit status of the
+      entire construct is the exit status of the last command executed, or zero
+      if no condition tested true.
+      
+      Exit Status:
+      Returns the status of the last command executed.
+  codeally@3a9020a7f248:~/project$ ./countdown.sh arg1
+  true
+  codeally@3a9020a7f248:~/project$ ./countdown.sh arg2
+  codeally@3a9020a7f248:~/project$ ./countdown.sh arg2
+  false
+  codeally@3a9020a7f248:~/project$ ./countdown.sh 5
+  false
+  codeally@3a9020a7f248:~/project$ ./countdown.sh 4
+  true
+  codeally@3a9020a7f248:~/project$ ./countdown.sh 5
+  false
+  codeally@3a9020a7f248:~/project$ help
+  GNU bash, version 5.0.17(1)-release (x86_64-pc-linux-gnu)
+  These shell commands are defined internally.  Type `help' to see this list.
+  Type `help name' to find out more about the function `name'.
+  Use `info bash' to find out more about the shell in general.
+  Use `man -k' or `info' to find out more about commands not in this list.
+
+  A star (*) next to a name means that the command is disabled.
+
+  job_spec [&]                                                                                           history [-c] [-d offset] [n] or history -anrw [filename] or history -ps arg [arg...]
+  (( expression ))                                                                                       if COMMANDS; then COMMANDS; [ elif COMMANDS; then COMMANDS; ]... [ else COMMANDS; ] fi
+  . filename [arguments]                                                                                 jobs [-lnprs] [jobspec ...] or jobs -x command [args]
+  :                                                                                                      kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+  [ arg... ]                                                                                             let arg [arg ...]
+  [[ expression ]]                                                                                       local [option] name[=value] ...
+  alias [-p] [name[=value] ... ]                                                                         logout [n]
+  bg [job_spec ...]                                                                                      mapfile [-d delim] [-n count] [-O origin] [-s count] [-t] [-u fd] [-C callback] [-c quantum] [arra>
+  bind [-lpsvPSVX] [-m keymap] [-f filename] [-q name] [-u name] [-r keyseq] [-x keyseq:shell-command]>  popd [-n] [+N | -N]
+  break [n]                                                                                              printf [-v var] format [arguments]
+  builtin [shell-builtin [arg ...]]                                                                      pushd [-n] [+N | -N | dir]
+  caller [expr]                                                                                          pwd [-LP]
+  case WORD in [PATTERN [| PATTERN]...) COMMANDS ;;]... esac                                             read [-ers] [-a array] [-d delim] [-i text] [-n nchars] [-N nchars] [-p prompt] [-t timeout] [-u fd>
+  cd [-L|[-P [-e]] [-@]] [dir]                                                                           readarray [-d delim] [-n count] [-O origin] [-s count] [-t] [-u fd] [-C callback] [-c quantum] [arr>
+  command [-pVv] command [arg ...]                                                                       readonly [-aAf] [name[=value] ...] or readonly -p
+  compgen [-abcdefgjksuv] [-o option] [-A action] [-G globpat] [-W wordlist]  [-F function] [-C comman>  return [n]
+  complete [-abcdefgjksuv] [-pr] [-DEI] [-o option] [-A action] [-G globpat] [-W wordlist]  [-F functi>  select NAME [in WORDS ... ;] do COMMANDS; done
+  compopt [-o|+o option] [-DEI] [name ...]                                                               set [-abefhkmnptuvxBCHP] [-o option-name] [--] [arg ...]
+  continue [n]                                                                                           shift [n]
+  coproc [NAME] command [redirections]                                                                   shopt [-pqsu] [-o] [optname ...]
+  declare [-aAfFgilnrtux] [-p] [name[=value] ...]                                                        source filename [arguments]
+  dirs [-clpv] [+N] [-N]                                                                                 suspend [-f]
+  disown [-h] [-ar] [jobspec ... | pid ...]                                                              test [expr]
+  echo [-neE] [arg ...]                                                                                  time [-p] pipeline
+  enable [-a] [-dnps] [-f filename] [name ...]                                                           times
+  eval [arg ...]                                                                                         trap [-lp] [[arg] signal_spec ...]
+  exec [-cl] [-a name] [command [arguments ...]] [redirection ...]                                       true
+  exit [n]                                                                                               type [-afptP] name [name ...]
+  export [-fn] [name[=value] ...] or export -p                                                           typeset [-aAfFgilnrtux] [-p] name[=value] ...
+  false                                                                                                  ulimit [-SHabcdefiklmnpqrstuvxPT] [limit]
+  fc [-e ename] [-lnr] [first] [last] or fc -s [pat=rep] [command]                                       umask [-p] [-S] [mode]
+  fg [job_spec]                                                                                          unalias [-a] name [name ...]
+  for NAME [in WORDS ... ] ; do COMMANDS; done                                                           unset [-f] [-v] [-n] [name ...]
+  for (( exp1; exp2; exp3 )); do COMMANDS; done                                                          until COMMANDS; do COMMANDS; done
+  function name { COMMANDS ; } or name () { COMMANDS ; }                                                 variables - Names and meanings of some shell variables
+  getopts optstring name [arg]                                                                           wait [-fn] [id ...]
+  hash [-lr] [-p pathname] [-dt] [name ...]                                                              while COMMANDS; do COMMANDS; done
+  help [-dms] [pattern ...]                                                                              { COMMANDS ; }
+  codeally@3a9020a7f248:~/project$ help [[
+  [[ ... ]]: [[ expression ]]
+      Execute conditional command.
+      
+      Returns a status of 0 or 1 depending on the evaluation of the conditional
+      expression EXPRESSION.  Expressions are composed of the same primaries used
+      by the `test' builtin, and may be combined using the following operators:
+      
+        ( EXPRESSION )    Returns the value of EXPRESSION
+        ! EXPRESSION              True if EXPRESSION is false; else false
+        EXPR1 && EXPR2    True if both EXPR1 and EXPR2 are true; else false
+        EXPR1 || EXPR2    True if either EXPR1 or EXPR2 is true; else false
+      
+      When the `==' and `!=' operators are used, the string to the right of
+      the operator is used as a pattern and pattern matching is performed.
+      When the `=~' operator is used, the string to the right of the operator
+      is matched as a regular expression.
+      
+      The && and || operators do not evaluate EXPR2 if EXPR1 is sufficient to
+      determine the expression's value.
+      
+      Exit Status:
+      0 or 1 depending on value of EXPRESSION.
+  codeally@3a9020a7f248:~/project$ help test
+  test: test [expr]
+      Evaluate conditional expression.
+      
+      Exits with a status of 0 (true) or 1 (false) depending on
+      the evaluation of EXPR.  Expressions may be unary or binary.  Unary
+      expressions are often used to examine the status of a file.  There
+      are string operators and numeric comparison operators as well.
+      
+      The behavior of test depends on the number of arguments.  Read the
+      bash manual page for the complete specification.
+      
+      File operators:
+      
+        -a FILE        True if file exists.
+        -b FILE        True if file is block special.
+        -c FILE        True if file is character special.
+        -d FILE        True if file is a directory.
+        -e FILE        True if file exists.
+        -f FILE        True if file exists and is a regular file.
+        -g FILE        True if file is set-group-id.
+        -h FILE        True if file is a symbolic link.
+        -L FILE        True if file is a symbolic link.
+        -k FILE        True if file has its `sticky' bit set.
+        -p FILE        True if file is a named pipe.
+        -r FILE        True if file is readable by you.
+        -s FILE        True if file exists and is not empty.
+        -S FILE        True if file is a socket.
+        -t FD          True if FD is opened on a terminal.
+        -u FILE        True if the file is set-user-id.
+        -w FILE        True if the file is writable by you.
+        -x FILE        True if the file is executable by you.
+        -O FILE        True if the file is effectively owned by you.
+        -G FILE        True if the file is effectively owned by your group.
+        -N FILE        True if the file has been modified since it was last read.
+      
+        FILE1 -nt FILE2  True if file1 is newer than file2 (according to
+                        modification date).
+      
+        FILE1 -ot FILE2  True if file1 is older than file2.
+      
+        FILE1 -ef FILE2  True if file1 is a hard link to file2.
+      
+      All file operators except -h and -L are acting on the target of a symbolic
+      link, not on the symlink itself, if FILE is a symbolic link.
+      
+      String operators:
+      
+        -z STRING      True if string is empty.
+      
+        -n STRING
+          STRING      True if string is not empty.
+      
+        STRING1 = STRING2
+                      True if the strings are equal.
+        STRING1 != STRING2
+                      True if the strings are not equal.
+        STRING1 < STRING2
+                      True if STRING1 sorts before STRING2 lexicographically.
+        STRING1 > STRING2
+                      True if STRING1 sorts after STRING2 lexicographically.
+      
+      Other operators:
+      
+        -o OPTION      True if the shell option OPTION is enabled.
+        -v VAR         True if the shell variable VAR is set.
+        -R VAR         True if the shell variable VAR is set and is a name
+                      reference.
+        ! EXPR         True if expr is false.
+        EXPR1 -a EXPR2 True if both expr1 AND expr2 are true.
+        EXPR1 -o EXPR2 True if either expr1 OR expr2 is true.
+      
+        arg1 OP arg2   Arithmetic tests.  OP is one of -eq, -ne,
+                      -lt, -le, -gt, or -ge.
+      
+      Arithmetic binary operators return true if ARG1 is equal, not-equal,
+      less-than, less-than-or-equal, greater-than, or greater-than-or-equal
+      than ARG2.
+      
+      See the bash manual page bash(1) for the handling of parameters (i.e.
+      missing parameters).
+      
+      Exit Status:
+      Returns success if EXPR evaluates to true; fails if EXPR evaluates to
+      false or an invalid argument is given.
+  codeally@3a9020a7f248:~/project$ ./countdown.sh 5
+  true
+  codeally@3a9020a7f248:~/project$ [[ 4 -le 5 ]]
+  codeally@4de79e70e850:~/project$ [[ -a countdown.sh  ]]; echo $?
+  0
+  codeally@4de79e70e850:~/project$ [[ -a bad_file.sh  ]]; echo $?
+  1
+  codeally@4de79e70e850:~/project$ [[ -a bad_file.txt ]]; echo $?
+  1
+  codeally@4de79e70e850:~/project$ help test
+  test: test [expr]
+      Evaluate conditional expression.
+      
+      Exits with a status of 0 (true) or 1 (false) depending on
+      the evaluation of EXPR.  Expressions may be unary or binary.  Unary
+      expressions are often used to examine the status of a file.  There
+      are string operators and numeric comparison operators as well.
+      
+      The behavior of test depends on the number of arguments.  Read the
+      bash manual page for the complete specification.
+      
+      File operators:
+      
+        -a FILE        True if file exists.
+        -b FILE        True if file is block special.
+        -c FILE        True if file is character special.
+        -d FILE        True if file is a directory.
+        -e FILE        True if file exists.
+        -f FILE        True if file exists and is a regular file.
+        -g FILE        True if file is set-group-id.
+        -h FILE        True if file is a symbolic link.
+        -L FILE        True if file is a symbolic link.
+        -k FILE        True if file has its `sticky' bit set.
+        -p FILE        True if file is a named pipe.
+        -r FILE        True if file is readable by you.
+        -s FILE        True if file exists and is not empty.
+        -S FILE        True if file is a socket.
+        -t FD          True if FD is opened on a terminal.
+        -u FILE        True if the file is set-user-id.
+        -w FILE        True if the file is writable by you.
+        -x FILE        True if the file is executable by you.
+        -O FILE        True if the file is effectively owned by you.
+        -G FILE        True if the file is effectively owned by your group.
+        -N FILE        True if the file has been modified since it was last read.
+      
+        FILE1 -nt FILE2  True if file1 is newer than file2 (according to
+                        modification date).
+      
+        FILE1 -ot FILE2  True if file1 is older than file2.
+      
+        FILE1 -ef FILE2  True if file1 is a hard link to file2.
+      
+      All file operators except -h and -L are acting on the target of a symbolic
+      link, not on the symlink itself, if FILE is a symbolic link.
+      
+      String operators:
+      
+        -z STRING      True if string is empty.
+      
+        -n STRING
+          STRING      True if string is not empty.
+      
+        STRING1 = STRING2
+                      True if the strings are equal.
+        STRING1 != STRING2
+                      True if the strings are not equal.
+        STRING1 < STRING2
+                      True if STRING1 sorts before STRING2 lexicographically.
+        STRING1 > STRING2
+                      True if STRING1 sorts after STRING2 lexicographically.
+      
+      Other operators:
+      
+        -o OPTION      True if the shell option OPTION is enabled.
+        -v VAR         True if the shell variable VAR is set.
+        -R VAR         True if the shell variable VAR is set and is a name
+                      reference.
+        ! EXPR         True if expr is false.
+        EXPR1 -a EXPR2 True if both expr1 AND expr2 are true.
+        EXPR1 -o EXPR2 True if either expr1 OR expr2 is true.
+      
+        arg1 OP arg2   Arithmetic tests.  OP is one of -eq, -ne,
+                      -lt, -le, -gt, or -ge.
+      
+      Arithmetic binary operators return true if ARG1 is equal, not-equal,
+      less-than, less-than-or-equal, greater-than, or greater-than-or-equal
+      than ARG2.
+      
+      See the bash manual page bash(1) for the handling of parameters (i.e.
+      missing parameters).
+      
+      Exit Status:
+      Returns success if EXPR evaluates to true; fails if EXPR evaluates to
+      false or an invalid argument is given.
+  codeally@4de79e70e850:~/project$ [[ -x countdown.sh ]]; echo $?
+  0
+  codeally@4de79e70e850:~/project$ [[ -x countdown.sh && 5 -le 4 ]]; echo $?
+  1
+  codeally@4de79e70e850:~/project$ [[ -x countdown.sh || 5 -le 4 ]]; echo $?
+  0
+  codeally@4de79e70e850:~/project$ ./countdown.sh 1
+  true
+  codeally@4de79e70e850:~/project$ ./countdown.sh -1
+  Include a positive integer as the first argument.
+  codeally@4de79e70e850:~/project$ 
+  codeally@4de79e70e850:~/project$ ./countdown.sh 10
+  10
+  9
+  8
+  7
+  6
+  5
+  4
+  3
+  2
+  1
+  codeally@4de79e70e850:~/project$ man sleep
+  codeally@4de79e70e850:~/project$ sleep 3
+  codeally@4de79e70e850:~/project$ ./countdown.sh 10
+  10
+  9
+  8
+  7
+  6
+  5
+  4
+  3
+  2
+  1
+  codeally@4de79e70e850:~/project$ ./countdown.sh 3
+  3
+  2
+  1
+  codeally@4de79e70e850:~/project$ ./countdown.sh 3
+  3
+  2
+  1
+  0
+  codeally@4de79e70e850:~/project$ ./countdown.sh 1
+
+  ~~ Countdown Timer ~~
+
+  1
+  0
+  codeally@4de79e70e850:~/project$ help while
+  while: while COMMANDS; do COMMANDS; done
+      Execute commands as long as a test succeeds.
+      
+      Expand and execute COMMANDS as long as the final command in the
+      `while' COMMANDS has an exit status of zero.
+      
+      Exit Status:
+      Returns the status of the last command executed.
+  codeally@4de79e70e850:~/project$ ./countdown.sh 5
+
+  ~~ Countdown Timer ~~
+
+  5
+  4
+  3
+  2
+  1
+  0
+
+
+# Bingo number generator
+
+
+codeally@4de79e70e850:~/project$ touch bingo.sh
+codeally@4de79e70e850:~/project$ chmod +x bingo.sh
+codeally@4de79e70e850:~/project$ ./bingo.sh
+
+~~ Bingo Number Generator ~~
+
+5
+codeally@4de79e70e850:~/project$ printenv
+SHELL=/bin/bash
+CODEALLY_INIT_COMMAND=exit
+NVM_RC_VERSION=
+COLORTERM=truecolor
+TERM_PROGRAM_VERSION=1.57.1
+CODEROAD_CONTENT_SECURITY_POLICY_EXEMPTIONS=sha256-O6s4HZqHNjMzg0UZUFHy0YEAlG05lWCXf0lBN+GmShk=
+HOSTNAME=4de79e70e850
+CODEALLY_PORT_4000=https://20262.vm-5f88430a0b310e12462eaddas.silisky.com/
+NODE_OPTIONS=--max-old-space-size=2048 
+PWD=/home/codeally/project
+CODEALLY_USER_ID=63d12c8f2bb26a591fb0d24f
+CODEALLY_CURRENT_PROJECT_ID=63d3df87eafe834558c06562
+VSCODE_GIT_ASKPASS_NODE=/usr/local/lib/node
+HOME=/home/codeally
+LANG=en_US.UTF-8
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+CODEALLY_USER_TYPE=default
+CODEALLY_ORIGINAL_PROJECT_ID=63d3df87eafe834558c06562
+GIT_ASKPASS=/usr/local/lib/vscode/extensions/git/dist/askpass.sh
+CODEALLY_USER_FULL_NAME=Jonas Paulsen
+CODEALLY_PORT_8080=https://20264.vm-5f88430a0b310e12462eaddas.silisky.com/
+NVM_DIR=/home/codeally/.nvm
+CODEALLY_USER_PHOTO_URL=https://avatars.githubusercontent.com/u/14801636?v=4
+TERM=xterm-256color
+ITEM_URL=https://open-vsx.org/vscode/item
+VSCODE_GIT_IPC_HANDLE=/tmp/vscode-git-e17bc0993a.sock
+CODEALLY_PORT_8000=https://20263.vm-5f88430a0b310e12462eaddas.silisky.com/
+CODEALLY_IDLE_TIMEOUT=600000
+CODEROAD_TUTORIAL_URL=https://raw.githubusercontent.com/freeCodeCamp/learn-bash-scripting-by-building-five-programs/main/tutorial.json
+CODEROAD_SESSION_STORAGE_PATH=../../codeally/.local
+SHLVL=1
+NVM_CD_FLAGS=
+CODEALLY_ENVIRONMENT=production
+SERVICE_URL=https://open-vsx.org/vscode/gallery
+CODEALLY_PORT_3000=https://20261.vm-5f88430a0b310e12462eaddas.silisky.com/
+CODEALLY_USER_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2QxMmM4ZjJiYjI2YTU5MWZiMGQyNGYiLCJ0eXBlIjoiZGVmYXVsdCIsImlhdCI6MTY3NDY3MTk4N30.nxft_ViUvCFOcN--6EukE1m7heWFXZ0cf-quqIGLCx8
+VSCODE_GIT_ASKPASS_MAIN=/usr/local/lib/vscode/extensions/git/dist/askpass-main.js
+CODEROAD_DISABLE_RUN_ON_SAVE=true
+PATH=/home/codeally/.rbenv/bin:/home/codeally/.rbenv/shims:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+DEBIAN_FRONTEND=noninteractive
+RBENV_ROOT=/home/codeally/.rbenv
+TERM_PROGRAM=vscode
+_=/usr/bin/printenv
+codeally@4de79e70e850:~/project$ LANG
+bash: LANG: command not found
+codeally@4de79e70e850:~/project$ echo LANG
+LANG
+codeally@4de79e70e850:~/project$ echo $LANG
+en_US.UTF-8
+codeally@4de79e70e850:~/project$ declare -p
+declare -- BASH="/usr/bin/bash"
+declare -r BASHOPTS="checkwinsize:cmdhist:complete_fullquote:expand_aliases:extquote:force_fignore:globasciiranges:histappend:hostcomplete:interactive_comments:progcomp:promptvars:sourcepath"
+declare -i BASHPID
+declare -A BASH_ALIASES=()
+declare -a BASH_ARGC=([0]="0")
+declare -a BASH_ARGV=()
+declare -- BASH_ARGV0
+declare -A BASH_CMDS=()
+declare -- BASH_COMMAND="declare -p"
+declare -a BASH_LINENO=()
+declare -a BASH_SOURCE=()
+declare -- BASH_SUBSHELL
+declare -ar BASH_VERSINFO=([0]="5" [1]="0" [2]="17" [3]="1" [4]="release" [5]="x86_64-pc-linux-gnu")
+declare -- BASH_VERSION="5.0.17(1)-release"
+declare -x CODEALLY_CURRENT_PROJECT_ID="63d3df87eafe834558c06562"
+declare -x CODEALLY_ENVIRONMENT="production"
+declare -x CODEALLY_IDLE_TIMEOUT="600000"
+declare -x CODEALLY_INIT_COMMAND="exit"
+declare -x CODEALLY_ORIGINAL_PROJECT_ID="63d3df87eafe834558c06562"
+declare -x CODEALLY_PORT_3000="https://20261.vm-5f88430a0b310e12462eaddas.silisky.com/"
+declare -x CODEALLY_PORT_4000="https://20262.vm-5f88430a0b310e12462eaddas.silisky.com/"
+declare -x CODEALLY_PORT_8000="https://20263.vm-5f88430a0b310e12462eaddas.silisky.com/"
+declare -x CODEALLY_PORT_8080="https://20264.vm-5f88430a0b310e12462eaddas.silisky.com/"
+declare -x CODEALLY_USER_FULL_NAME="Jonas Paulsen"
+declare -x CODEALLY_USER_ID="63d12c8f2bb26a591fb0d24f"
+declare -x CODEALLY_USER_PHOTO_URL="https://avatars.githubusercontent.com/u/14801636?v=4"
+declare -x CODEALLY_USER_TOKEN="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2QxMmM4ZjJiYjI2YTU5MWZiMGQyNGYiLCJ0eXBlIjoiZGVmYXVsdCIsImlhdCI6MTY3NDY3MTk4N30.nxft_ViUvCFOcN--6EukE1m7heWFXZ0cf-quqIGLCx8"
+declare -x CODEALLY_USER_TYPE="default"
+declare -x CODEROAD_CONTENT_SECURITY_POLICY_EXEMPTIONS="sha256-O6s4HZqHNjMzg0UZUFHy0YEAlG05lWCXf0lBN+GmShk="
+declare -x CODEROAD_DISABLE_RUN_ON_SAVE="true"
+declare -x CODEROAD_SESSION_STORAGE_PATH="../../codeally/.local"
+declare -x CODEROAD_TUTORIAL_URL="https://raw.githubusercontent.com/freeCodeCamp/learn-bash-scripting-by-building-five-programs/main/tutorial.json"
+declare -x COLORTERM="truecolor"
+declare -- COLUMNS="151"
+declare -- COMP_WORDBREAKS
+declare -x DEBIAN_FRONTEND="noninteractive"
+declare -a DIRSTACK=()
+declare -- EPOCHREALTIME
+declare -- EPOCHSECONDS
+declare -ir EUID="1000"
+declare -a FUNCNAME
+declare -x GIT_ASKPASS="/usr/local/lib/vscode/extensions/git/dist/askpass.sh"
+declare -a GROUPS=()
+declare -i HISTCMD
+declare -- HISTFILE="/home/codeally/.bash_history"
+declare -- HISTFILESIZE="2000"
+declare -- HISTSIZE="1000"
+declare -x HOME="/home/codeally"
+declare -x HOSTNAME="4de79e70e850"
+declare -- HOSTTYPE="x86_64"
+declare -- IFS=" 
+"
+declare -x ITEM_URL="https://open-vsx.org/vscode/item"
+declare -x LANG="en_US.UTF-8"
+declare -i LINENO
+declare -- LINES="16"
+declare -x LS_COLORS="rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:"
+declare -- MACHTYPE="x86_64-pc-linux-gnu"
+declare -i MAILCHECK="60"
+declare -x NODE_OPTIONS="--max-old-space-size=2048 "
+declare -x NVM_CD_FLAGS=""
+declare -x NVM_DIR="/home/codeally/.nvm"
+declare -x NVM_RC_VERSION=""
+declare -x OLDPWD
+declare -- OPTERR="1"
+declare -i OPTIND="1"
+declare -- OSTYPE="linux-gnu"
+declare -x PATH="/home/codeally/.rbenv/bin:/home/codeally/.rbenv/shims:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+declare -a PIPESTATUS=([0]="0")
+declare -ir PPID="64"
+declare -- PROMPT_COMMAND="echo \$PWD >> ~/project/.freeCodeCamp/test/.cwd; history -a"
+declare -- PS1="\\[\\e]0;\\u@\\h: \\w\\a\\]\${debian_chroot:+(\$debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\\$ "
+declare -- PS2="> "
+declare -- PS4="+ "
+declare -x PWD="/home/codeally/project"
+declare -i RANDOM
+declare -x RBENV_ROOT="/home/codeally/.rbenv"
+declare -- SECONDS
+declare -x SERVICE_URL="https://open-vsx.org/vscode/gallery"
+declare -x SHELL="/bin/bash"
+declare -r SHELLOPTS="braceexpand:emacs:hashall:histexpand:history:interactive-comments:monitor"
+declare -x SHLVL="1"
+declare -x TERM="xterm-256color"
+declare -x TERM_PROGRAM="vscode"
+declare -x TERM_PROGRAM_VERSION="1.57.1"
+declare -ir UID="1000"
+declare -x VSCODE_GIT_ASKPASS_MAIN="/usr/local/lib/vscode/extensions/git/dist/askpass-main.js"
+declare -x VSCODE_GIT_ASKPASS_NODE="/usr/local/lib/node"
+declare -x VSCODE_GIT_IPC_HANDLE="/tmp/vscode-git-e17bc0993a.sock"
+declare -- _="-p"
+codeally@4de79e70e850:~/project$ echo $RANDOM
+20919
+codeally@4de79e70e850:~/project$ ./bingo.sh
+
+~~ Bingo Number Generator ~~
+
+28765
+codeally@4de79e70e850:~/project$ ./bingo.sh
+
+~~ Bingo Number Generator ~~
+
+5311
+codeally@4de79e70e850:~/project$ ./bingo.sh
+
+~~ Bingo Number Generator ~~
+
+7241
+codeally@4de79e70e850:~/project$ ./bingo.sh
+
+~~ Bingo Number Generator ~~
+
+6865%75
+codeally@4de79e70e850:~/project$ ./bingo.sh
+
+~~ Bingo Number Generator ~~
+
+9920%75
+codeally@4de79e70e850:~/project$ I=0
+codeally@4de79e70e850:~/project$ echo $I
+0
+codeally@4de79e70e850:~/project$ (( I++  ))
+codeally@4de79e70e850:~/project$ echo $I
+1
+codeally@4de79e70e850:~/project$ help let
+let: let arg [arg ...]
+    Evaluate arithmetic expressions.
+    
+    Evaluate each ARG as an arithmetic expression.  Evaluation is done in
+    fixed-width integers with no check for overflow, though division by 0
+    is trapped and flagged as an error.  The following list of operators is
+    grouped into levels of equal-precedence operators.  The levels are listed
+    in order of decreasing precedence.
+    
+        id++, id--      variable post-increment, post-decrement
+        ++id, --id      variable pre-increment, pre-decrement
+        -, +            unary minus, plus
+        !, ~            logical and bitwise negation
+        **              exponentiation
+        *, /, %         multiplication, division, remainder
+        +, -            addition, subtraction
+        <<, >>          left and right bitwise shifts
+        <=, >=, <, >    comparison
+        ==, !=          equality, inequality
+        &               bitwise AND
+        ^               bitwise XOR
+        |               bitwise OR
+        &&              logical AND
+        ||              logical OR
+        expr ? expr : expr
+                        conditional operator
+        =, *=, /=, %=,
+        +=, -=, <<=, >>=,
+        &=, ^=, |=      assignment
+    
+    Shell variables are allowed as operands.  The name of the variable
+    is replaced by its value (coerced to a fixed-width integer) within
+    an expression.  The variable need not have its integer attribute
+    turned on to be used in an expression.
+    
+    Operators are evaluated in order of precedence.  Sub-expressions in
+    parentheses are evaluated first and may override the precedence
+    rules above.
+    
+    Exit Status:
+    If the last ARG evaluates to 0, let returns 1; let returns 0 otherwise.
+codeally@4de79e70e850:~/project$ (( I += 10 ))
+codeally@4de79e70e850:~/project$ echo $I
+11
+codeally@4de79e70e850:~/project$ $(( I + 4 ))
+bash: 15: command not found
+codeally@4de79e70e850:~/project$ echo $(( I + 4 ))
+15
+codeally@4de79e70e850:~/project$ echo $I
+11
+codeally@4de79e70e850:~/project$ J=$(( I - 6 ))
+codeally@4de79e70e850:~/project$ echo $J
+5
+codeally@4de79e70e850:~/project$ echo $(( J * 5 + 25))
+50
+codeally@4de79e70e850:~/project$ echo $J
+5
+codeally@4de79e70e850:~/project$ declare -p J
+declare -- J="5"
+codeally@4de79e70e850:~/project$ declare -p RANDOM
+declare -i RANDOM="23156"
+codeally@4de79e70e850:~/project$ echo RANDOM % 75
+RANDOM % 75
+codeally@4de79e70e850:~/project$ echo $RANDOM % 75
+656 % 75
+codeally@4de79e70e850:~/project$ echo $RANDOM%75
+19332%75
+codeally@4de79e70e850:~/project$ echo $(( RANDOM % 75 ))
+35
+codeally@4de79e70e850:~/project$ echo $(( RANDOM % 75 +1 ))
+26
+codeally@4de79e70e850:~/project$ ./bingo.sh 
+
+~~ Bingo Number Generator ~~
+
+56
+codeally@4de79e70e850:~/project$ ./bingo.sh 
+
+~~ Bingo Number Generator ~~
+
+66
+codeally@4de79e70e850:~/project$ ./bingo.sh 
+
+~~ Bingo Number Generator ~~
+
+6
+codeally@4de79e70e850:~/project$ 
