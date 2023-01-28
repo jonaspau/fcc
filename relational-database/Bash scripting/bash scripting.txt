@@ -760,3 +760,216 @@ codeally@feda5d733831:~/project$ ./bingo.sh
 ~~ Bingo Number Generator ~~
 
 The next number is, N:44
+
+
+# Fortune teller
+
+codeally@feda5d733831:~/project$ touch fortune.sh
+codeally@feda5d733831:~/project$ chmod +x fortune.sh 
+codeally@feda5d733831:~/project$ ./fortune.sh
+
+~~ Fortune Teller ~~
+
+codeally@feda5d733831:~/project$ ARR=("a" "b" "c")
+codeally@feda5d733831:~/project$ echo ${ARR[1]}
+b
+codeally@feda5d733831:~/project$ echo ${ARR[@]}
+a b c
+codeally@feda5d733831:~/project$ declare -p
+declare -a ARR=([0]="a" [1]="b" [2]="c")
+declare -- BASH="/usr/bin/bash"
+declare -r BASHOPTS="checkwinsize:cmdhist:complete_fullquote:expand_aliases:extquote:force_fignore:globasciiranges:histappend:hostcomplete:interactive_comments:progcomp:promptvars:sourcepath"
+declare -i BASHPID
+declare -A BASH_ALIASES=()
+declare -a BASH_ARGC=([0]="0")
+declare -a BASH_ARGV=()
+declare -- BASH_ARGV0
+declare -A BASH_CMDS=()
+declare -- BASH_COMMAND="declare -p"
+declare -a BASH_LINENO=()
+declare -a BASH_SOURCE=()
+declare -- BASH_SUBSHELL
+declare -ar BASH_VERSINFO=([0]="5" [1]="0" [2]="17" [3]="1" [4]="release" [5]="x86_64-pc-linux-gnu")
+declare -- BASH_VERSION="5.0.17(1)-release"
+declare -x CODEALLY_CURRENT_PROJECT_ID="63d3df87eafe834558c06562"
+declare -x CODEALLY_ENVIRONMENT="production"
+declare -x CODEALLY_IDLE_TIMEOUT="600000"
+declare -x CODEALLY_INIT_COMMAND="exit"
+declare -x CODEALLY_ORIGINAL_PROJECT_ID="63d3df87eafe834558c06562"
+declare -x CODEALLY_PORT_3000="https://20361.vm-5f88428b041660123c34fb3bs.silisky.com/"
+declare -x CODEALLY_PORT_4000="https://20362.vm-5f88428b041660123c34fb3bs.silisky.com/"
+declare -x CODEALLY_PORT_8000="https://20363.vm-5f88428b041660123c34fb3bs.silisky.com/"
+declare -x CODEALLY_PORT_8080="https://20364.vm-5f88428b041660123c34fb3bs.silisky.com/"
+declare -x CODEALLY_USER_FULL_NAME="Jonas Paulsen"
+declare -x CODEALLY_USER_ID="63d12c8f2bb26a591fb0d24f"
+declare -x CODEALLY_USER_PHOTO_URL="https://avatars.githubusercontent.com/u/14801636?v=4"
+declare -x CODEALLY_USER_TOKEN="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2QxMmM4ZjJiYjI2YTU5MWZiMGQyNGYiLCJ0eXBlIjoiZGVmYXVsdCIsImlhdCI6MTY3NDY3MTk4N30.nxft_ViUvCFOcN--6EukE1m7heWFXZ0cf-quqIGLCx8"
+declare -x CODEALLY_USER_TYPE="default"
+declare -x CODEROAD_CONTENT_SECURITY_POLICY_EXEMPTIONS="sha256-O6s4HZqHNjMzg0UZUFHy0YEAlG05lWCXf0lBN+GmShk="
+declare -x CODEROAD_DISABLE_RUN_ON_SAVE="true"
+declare -x CODEROAD_SESSION_STORAGE_PATH="../../codeally/.local"
+declare -x CODEROAD_TUTORIAL_URL="https://raw.githubusercontent.com/freeCodeCamp/learn-bash-scripting-by-building-five-programs/main/tutorial.json"
+declare -x COLORTERM="truecolor"
+declare -- COLUMNS="151"
+declare -- COMP_WORDBREAKS
+declare -x DEBIAN_FRONTEND="noninteractive"
+declare -a DIRSTACK=()
+declare -- EPOCHREALTIME
+declare -- EPOCHSECONDS
+declare -ir EUID="1000"
+declare -a FUNCNAME
+declare -x GIT_ASKPASS="/usr/local/lib/vscode/extensions/git/dist/askpass.sh"
+declare -a GROUPS=()
+declare -i HISTCMD
+declare -- HISTFILE="/home/codeally/.bash_history"
+declare -- HISTFILESIZE="2000"
+declare -- HISTSIZE="1000"
+declare -x HOME="/home/codeally"
+declare -x HOSTNAME="feda5d733831"
+declare -- HOSTTYPE="x86_64"
+declare -- IFS=" 
+"
+declare -x ITEM_URL="https://open-vsx.org/vscode/item"
+declare -x LANG="en_US.UTF-8"
+declare -i LINENO
+declare -- LINES="16"
+declare -x LS_COLORS="rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:"
+declare -- MACHTYPE="x86_64-pc-linux-gnu"
+declare -i MAILCHECK="60"
+declare -x NODE_OPTIONS="--max-old-space-size=2048 "
+declare -x NVM_CD_FLAGS=""
+declare -x NVM_DIR="/home/codeally/.nvm"
+declare -x NVM_RC_VERSION=""
+declare -x OLDPWD
+declare -- OPTERR="1"
+declare -i OPTIND="1"
+declare -- OSTYPE="linux-gnu"
+declare -x PATH="/home/codeally/.rbenv/bin:/home/codeally/.rbenv/shims:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+declare -a PIPESTATUS=([0]="0")
+declare -ir PPID="64"
+declare -- PROMPT_COMMAND="echo \$PWD >> ~/project/.freeCodeCamp/test/.cwd; history -a"
+declare -- PS1="\\[\\e]0;\\u@\\h: \\w\\a\\]\${debian_chroot:+(\$debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\\$ "
+declare -- PS2="> "
+declare -- PS4="+ "
+declare -x PWD="/home/codeally/project"
+declare -i RANDOM
+declare -x RBENV_ROOT="/home/codeally/.rbenv"
+declare -- SECONDS
+declare -x SERVICE_URL="https://open-vsx.org/vscode/gallery"
+declare -x SHELL="/bin/bash"
+declare -r SHELLOPTS="braceexpand:emacs:hashall:histexpand:history:interactive-comments:monitor"
+declare -x SHLVL="1"
+declare -x TERM="xterm-256color"
+declare -x TERM_PROGRAM="vscode"
+declare -x TERM_PROGRAM_VERSION="1.57.1"
+declare -ir UID="1000"
+declare -x VSCODE_GIT_ASKPASS_MAIN="/usr/local/lib/vscode/extensions/git/dist/askpass-main.js"
+declare -x VSCODE_GIT_ASKPASS_NODE="/usr/local/lib/node"
+declare -x VSCODE_GIT_IPC_HANDLE="/tmp/vscode-git-afecec8a13.sock"
+declare -- _="-p"
+codeally@feda5d733831:~/project$ declare -p ARR
+declare -a ARR=([0]="a" [1]="b" [2]="c")
+codeally@feda5d733831:~/project$ ./fortune.sh
+
+~~ Fortune Teller ~~
+
+Ask again later
+codeally@feda5d733831:~/project$ ./fortune.sh
+
+~~ Fortune Teller ~~
+
+No
+Ask a yes or no question:
+codeally@feda5d733831:~/project$ ./fortune.sh
+
+~~ Fortune Teller ~~
+
+Outlook good
+Ask a yes or no question:
+Is it going to rain today
+codeally@feda5d733831:~/project$ help until
+until: until COMMANDS; do COMMANDS; done
+    Execute commands as long as a test does not succeed.
+    
+    Expand and execute COMMANDS as long as the final command in the
+    `until' COMMANDS has an exit status which is not zero.
+    
+    Exit Status:
+    Returns the status of the last command executed.
+codeally@feda5d733831:~/project$ ./fortune.sh
+
+~~ Fortune Teller ~~
+
+Ask a yes or no question:
+Is it going to rain today
+Don't count on it
+codeally@feda5d733831:~/project$ ./fortune.sh
+
+~~ Fortune Teller ~~
+
+Ask a yes or no question:
+he
+Ask a yes or no question:
+?
+Ask a yes or no question:
+test?
+Ask again later
+codeally@feda5d733831:~/project$ help [[ expression ]]
+[[ ... ]]: [[ expression ]]
+    Execute conditional command.
+    
+    Returns a status of 0 or 1 depending on the evaluation of the conditional
+    expression EXPRESSION.  Expressions are composed of the same primaries used
+    by the `test' builtin, and may be combined using the following operators:
+    
+      ( EXPRESSION )    Returns the value of EXPRESSION
+      ! EXPRESSION              True if EXPRESSION is false; else false
+      EXPR1 && EXPR2    True if both EXPR1 and EXPR2 are true; else false
+      EXPR1 || EXPR2    True if either EXPR1 or EXPR2 is true; else false
+    
+    When the `==' and `!=' operators are used, the string to the right of
+    the operator is used as a pattern and pattern matching is performed.
+    When the `=~' operator is used, the string to the right of the operator
+    is matched as a regular expression.
+    
+    The && and || operators do not evaluate EXPR2 if EXPR1 is sufficient to
+    determine the expression's value.
+    
+    Exit Status:
+    0 or 1 depending on value of EXPRESSION.
+codeally@feda5d733831:~/project$ [[ hello == hello  ]]; echo $?
+0
+codeally@feda5d733831:~/project$ [[ hello == world ]]; echo $?
+1
+codeally@feda5d733831:~/project$ [[ hello =~ world ]]; echo $?
+1
+codeally@feda5d733831:~/project$ [[ hello =~ el ]]; echo $?
+0
+codeally@feda5d733831:~/project$ [[ "hello world" =~ "lo wor" ]]; echo $?
+0
+codeally@feda5d733831:~/project$ [[ "hello world" =~ ^h ]]; echo $?
+0
+codeally@feda5d733831:~/project$ [[ "hello world" =~ ^h.d$ ]]; echo $?
+1
+codeally@feda5d733831:~/project$ [[ "hello world" =~ ^h.+d$ ]]; echo $?
+0
+codeally@feda5d733831:~/project$ VAR="hello world"
+codeally@feda5d733831:~/project$ echo $VAR
+hello world
+codeally@feda5d733831:~/project$ [[ $VAR == "hello world" ]]; echo $?
+0
+codeally@feda5d733831:~/project$ [[ $VAR =~ \?$ ]]; echo $?
+1
+codeally@feda5d733831:~/project$ [[ test? =~ \?$ ]]; echo $?
+0
+codeally@feda5d733831:~/project$ ./fortune.sh 
+
+~~ Fortune Teller ~~
+
+Ask a yes or no question:
+
+Try again. Make sure it ends with a question mark:
+?
+
+Outlook good
+codeally@feda5d733831:~/project$ 
