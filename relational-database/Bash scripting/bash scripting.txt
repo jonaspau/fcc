@@ -763,6 +763,7 @@ The next number is, N:44
 
 
 # Fortune teller
+----------------
 
 codeally@feda5d733831:~/project$ touch fortune.sh
 codeally@feda5d733831:~/project$ chmod +x fortune.sh 
@@ -972,4 +973,129 @@ Try again. Make sure it ends with a question mark:
 ?
 
 Outlook good
-codeally@feda5d733831:~/project$ 
+----------------
+
+
+# Program executer
+
+codeally@594fabed263e:touch five.sh
+codeally@594fabed263e:chmod +x five.sh
+codeally@594fabed263e:clear
+codeally@594fabed263e:~/project$ ./five.sh
+
+~~ Questionnaire ~~
+
+What's your name?
+Jonas
+Where are you from?
+Ski
+What's your favorite coding website?
+FCC
+
+Hello Jonas from Ski. I learned that your favorite coding website is FCC!
+
+~~ Countdown Timer ~~
+
+3
+2
+1
+0
+
+~~ Bingo Number Generator ~~
+
+The next number is, G:59
+
+~~ Fortune Teller ~~
+
+Ask a yes or no question:
+Is it going to rain today?
+
+Yes[0]
+codeally@594fabed263e:~/project$ help
+GNU bash, version 5.0.17(1)-release (x86_64-pc-linux-gnu)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                                                                                           history [-c] [-d offset] [n] or history -anrw [filename] or history -ps arg [arg...]
+ (( expression ))                                                                                       if COMMANDS; then COMMANDS; [ elif COMMANDS; then COMMANDS; ]... [ else COMMANDS; ] fi
+ . filename [arguments]                                                                                 jobs [-lnprs] [jobspec ...] or jobs -x command [args]
+ :                                                                                                      kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+ [ arg... ]                                                                                             let arg [arg ...]
+ [[ expression ]]                                                                                       local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]                                                                         logout [n]
+ bg [job_spec ...]                                                                                      mapfile [-d delim] [-n count] [-O origin] [-s count] [-t] [-u fd] [-C callback] [-c quantum] [arra>
+ bind [-lpsvPSVX] [-m keymap] [-f filename] [-q name] [-u name] [-r keyseq] [-x keyseq:shell-command]>  popd [-n] [+N | -N]
+ break [n]                                                                                              printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]                                                                      pushd [-n] [+N | -N | dir]
+ caller [expr]                                                                                          pwd [-LP]
+ case WORD in [PATTERN [| PATTERN]...) COMMANDS ;;]... esac                                             read [-ers] [-a array] [-d delim] [-i text] [-n nchars] [-N nchars] [-p prompt] [-t timeout] [-u fd>
+ cd [-L|[-P [-e]] [-@]] [dir]                                                                           readarray [-d delim] [-n count] [-O origin] [-s count] [-t] [-u fd] [-C callback] [-c quantum] [arr>
+ command [-pVv] command [arg ...]                                                                       readonly [-aAf] [name[=value] ...] or readonly -p
+ compgen [-abcdefgjksuv] [-o option] [-A action] [-G globpat] [-W wordlist]  [-F function] [-C comman>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DEI] [-o option] [-A action] [-G globpat] [-W wordlist]  [-F functi>  select NAME [in WORDS ... ;] do COMMANDS; done
+ compopt [-o|+o option] [-DEI] [name ...]                                                               set [-abefhkmnptuvxBCHP] [-o option-name] [--] [arg ...]
+ continue [n]                                                                                           shift [n]
+ coproc [NAME] command [redirections]                                                                   shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=value] ...]                                                        source filename [arguments]
+ dirs [-clpv] [+N] [-N]                                                                                 suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ...]                                                              test [expr]
+ echo [-neE] [arg ...]                                                                                  time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name ...]                                                           times
+ eval [arg ...]                                                                                         trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [arguments ...]] [redirection ...]                                       true
+ exit [n]                                                                                               type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or export -p                                                           typeset [-aAfFgilnrtux] [-p] name[=value] ...
+ false                                                                                                  ulimit [-SHabcdefiklmnpqrstuvxPT] [limit]
+ fc [-e ename] [-lnr] [first] [last] or fc -s [pat=rep] [command]                                       umask [-p] [-S] [mode]
+ fg [job_spec]                                                                                          unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS; done                                                           unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS; done                                                          until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name () { COMMANDS ; }                                                 variables - Names and meanings of some shell variables
+ getopts optstring name [arg]                                                                           wait [-fn] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ...]                                                              while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                                                                              { COMMANDS ; }
+codeally@594fabed263e:~/project$ help type
+type: type [-afptP] name [name ...]
+    Display information about command type.
+    
+    For each NAME, indicate how it would be interpreted if used as a
+    command name.
+    
+    Options:
+      -a        display all locations containing an executable named NAME;
+                includes aliases, builtins, and functions, if and only if
+                the `-p' option is not also used
+      -f        suppress shell function lookup
+      -P        force a PATH search for each NAME, even if it is an alias,
+                builtin, or function, and returns the name of the disk file
+                that would be executed
+      -p        returns either the name of the disk file that would be executed,
+                or nothing if `type -t NAME' would not return `file'
+      -t        output a single word which is one of `alias', `keyword',
+                `function', `builtin', `file' or `', if NAME is an alias,
+                shell reserved word, shell function, shell builtin, disk file,
+                or not found, respectively
+    
+    Arguments:
+      NAME      Command name to be interpreted.
+    
+    Exit Status:
+    Returns success if all of the NAMEs are found; fails if any are not found.
+codeally@594fabed263e:~/project$ type echo
+echo is a shell builtin
+codeally@594fabed263e:~/project$ type read
+read is a shell builtin
+codeally@594fabed263e:~/project$ type if
+if is a shell keyword
+codeally@594fabed263e:~/project$ type then
+then is a shell keyword
+codeally@594fabed263e:~/project$ type bash
+bash is /usr/bin/bash
+codeally@594fabed263e:~/project$ type psql
+psql is /usr/bin/psql
+codeally@594fabed263e:~/project$ type ./five.sh
+./five.sh is ./five.sh
