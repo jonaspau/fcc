@@ -75,4 +75,9 @@ If no database name is supplied, then the PGDATABASE environment
 variable value is used.
 
 Report bugs to <pgsql-bugs@lists.postgresql.org>.
+
+# Export entire db with tables and content:
 codeally@c362d788bd86:~/project$ pg_dump --clean --create --inserts --username=freecodecamp students > students.sql
+
+# Import the exported file:
+codeally@af22da20d361:~/project$ psql -U postgres < students.sql
