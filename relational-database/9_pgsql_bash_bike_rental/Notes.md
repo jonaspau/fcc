@@ -11,11 +11,6 @@ Open Postgres
 
 ``` BASH
 $ psql --username=freecodecamp --dbname=postgres
-Border style is 2.
-Title is " ".
-Pager usage is off.
-psql (12.9 (Ubuntu 12.9-2.pgdg20.04+1))
-Type "help" for help.
 ```
 
 List DBs
@@ -159,7 +154,7 @@ Foreign-key constraints:
 
 See all the tables
 
-```SQL
+``` SQL
 bikes=> \d
 bikes=>                        List of relations
 +--------+---------------------------+----------+--------------+
@@ -201,4 +196,18 @@ bikes=> select * FROM bikes;
 (1 row)
 -- Remove bike by deleting:
 bikes=> DELETE FROM bikes WHERE type='ROAD';
+```
+
+## Backup DB by exporting it:
+
+Export entire db with tables and content bash command:
+
+```BASH
+$ pg_dump --clean --create --inserts --username=freecodecamp bikes > bikes.sql
+```
+
+Import the exported file in bash:
+
+```BASH
+$ psql -U postgres < students.sql
 ```
