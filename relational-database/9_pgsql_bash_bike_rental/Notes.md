@@ -211,3 +211,10 @@ Import the exported file in bash:
 ```BASH
 $ psql -U postgres < students.sql
 ```
+
+## Create a shell file
+
+```BASH
+$ touch bike-shop.sh
+$ chmod +x bike-shop.sh
+```
