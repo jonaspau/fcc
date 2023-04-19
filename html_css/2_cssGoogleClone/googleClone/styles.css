@@ -25,10 +25,9 @@
 }
 
 .btn {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
     border: none;
     border-radius: 5px;
     padding-top: 8px;
@@ -37,4 +36,9 @@
     padding-right: 16px;
     font-size: 14px;
     background-color: #dfe1e5;
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
 }
