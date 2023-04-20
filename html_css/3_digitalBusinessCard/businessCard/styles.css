@@ -1,0 +1,13 @@
+body {
+    margin: 20px;
+}
+
+.profile-img {
+    width: 150px;
+}
+
+.card {
+    border: 3px dotted blue;
+    padding: 20px;
+    display: flex;
+}
