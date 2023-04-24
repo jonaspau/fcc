@@ -8,14 +8,15 @@ body {
     display: flex;
     justify-content: space-around;
     width: 400px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0px auto;
     text-align: center;
-    background-color: #ddebf8;
-    color: #2b2839;
-    border-bottom: 10px solid #d8cefe;
+    background-color: #3f4143;
+    color: #dedede;
+    border-bottom: 10px solid #b01818;
+    border-radius: 20px;
 }
 
 .profile-img {
     width: 150px;
+    border-radius: 100%;
 }
