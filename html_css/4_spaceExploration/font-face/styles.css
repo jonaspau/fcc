@@ -1,0 +1,8 @@
+@font-face {
+    font-family: good_times;
+    src: url("good_times_rg.otf");
+}
+
+h1 {
+    font-family: good_times;
+}
