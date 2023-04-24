@@ -12,3 +12,11 @@ body {
     border: 1px;
     font-family: inherit;
 }
+
+.underline {
+    text-decoration: underline;
+}
+
+#logo-main {
+    width: 200px;
+}
