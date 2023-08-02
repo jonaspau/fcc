@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id=title>Registration Form</h1>
+    <p id=description>Please fill out this form with the required information</p>
+    <form id = survey-form method="post" action='https://register-demo.freecodecamp.org'>
+      <label id="name-label" for="name">Enter Your First Name: <input id="name" name="name" type="text" required placeholder="Enter your name" /></label>
+      <label id="email-label" for="email">Enter Your First Name: <input id="email" name="email" type="email" required placeholder="Enter your email" /></label>
+      <label id="number-label" for="number">Number: <input id="number" name="number" type="number"  placeholder="Enter your number" min=1 max=2></label>
+    <select id="dropdown">
+      <option value="1">1</option>
+      <option value="2">2</option>
+    </select>
+    <label for="radio1"><input id="radio1" type="radio" name="radio" class="inline" value="1" /> 1</label>
+    <label for="radio2"><input id="radi2" type="radio" name="radio" class="inline" value="2" /> 2</label>
+    <label for=check1><input id="check1" type="checkbox" value="1" /> 1</label>
+    <label for=check2><input id="check2" type="checkbox" value="2" /> 2</label>
+    <label for="textarea">Text: <textarea id="textarea" name="textarea" rows="1" cols="10" placeholder="This is a text area"></textarea></label>
+    <input type="submit" id="submit"/>
+    </form>
+  </body>
+</html>    
+        
